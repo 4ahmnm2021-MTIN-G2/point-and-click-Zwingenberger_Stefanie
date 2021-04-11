@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public Vector3 mousePos;
     public Vector3 mouseCameraPos;
+    public float speed = 0.1f;
 
     void Update()
     {
@@ -13,7 +14,7 @@ public class Player : MonoBehaviour
         {
             mousePos = Input.mousePosition;
             mouseCameraPos = Camera.main.ScreenToWorldPoint(mousePos);
-            this.transform.position = mouseCameraPos;
+            this.transform.position = Vector3.MoveTowards(this.transform.position,mouseCameraPos,speed);
         }
     }
 }
