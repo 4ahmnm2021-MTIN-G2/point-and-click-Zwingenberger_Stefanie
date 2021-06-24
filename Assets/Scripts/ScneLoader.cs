@@ -7,6 +7,6 @@ public class ScneLoader : MonoBehaviour
 {
     public void StartScene()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
